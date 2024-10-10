@@ -8,7 +8,7 @@ import {
 } from './styles'
 import LogoImage from '../../assets/images/logo_coffe.png'
 import Serach from '../Search'
-import { CartButton } from '../CartButton'
+import { CartButton } from '../Buttons/CartButton'
 import { Link, animateScroll as scroll } from 'react-scroll'
 
 const Menu = () => {

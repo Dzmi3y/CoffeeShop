@@ -4,7 +4,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem var(--left-right-margin) 0rem var(--left-right-margin);
+    margin: 2rem var(--left-right-margin) 0rem var(--left-right-margin);
 `
 export const Logo = styled.img`
     width: 150px;

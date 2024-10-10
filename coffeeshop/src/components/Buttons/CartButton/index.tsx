@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import { Button, StyledImg } from './styles'
-import EmptyCartImage from '../../assets/images/empty_cart.png'
+import EmptyCartImage from '../../../assets/images/empty_cart.png'
 
 type Props = {
     onClick?: () => void

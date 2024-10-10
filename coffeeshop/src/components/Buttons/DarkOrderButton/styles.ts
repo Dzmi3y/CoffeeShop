@@ -1,15 +1,14 @@
 import styled from 'styled-components'
-import { media, ScreenSizeEnum } from '../../media'
+import { media, ScreenSizeEnum } from '../../../media'
 
 export const Button = styled.button`
-    border-radius: 50;
+    border-radius: 33px;
     cursor: pointer;
-    width: 32px;
-    height: 32px;
+    width: 170px;
+    height: 46px;
     border: none;
-    margin-top: 5px;
     padding: 0;
-    background: none;
+    background: var(--secondary-color);
     &:active {
         filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.9));
     }
@@ -23,8 +22,19 @@ export const Button = styled.button`
         }
     `}
 `
-
+export const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+`
+export const Text = styled.span`
+    color: var(--glass-color);
+    font-family: PoppinsSemiBold;
+    font-size: 14px;
+    margin-top: auto;
+    margin-bottom: auto;
+`
 export const StyledImg = styled.img`
-    width: 32px;
-    height: 32px;
+    width: 22px;
+    height: 22px;
 `
