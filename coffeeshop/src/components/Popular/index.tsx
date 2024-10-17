@@ -1,14 +1,7 @@
 import React from 'react'
-import {
-    BackgroundImage,
-    CardContainer,
-    CoffeeBeansBackgroundImage,
-    Container,
-    Title,
-} from './styles'
+import { BackgroundImage, CardContainer, Container, Title } from './styles'
 import { PopularProductCard } from '../PopularProductCard'
 import BackGroundRectangle from '../../assets/images/back_ground_rectangle.png'
-import CoffeeBeans from '../../assets/images/coffee_beans_popular.png'
 
 export const Popular = () => {
     const products = [
@@ -53,7 +46,6 @@ export const Popular = () => {
                 ))}
             </CardContainer>
             <BackgroundImage src={BackGroundRectangle} />
-            <CoffeeBeansBackgroundImage src={CoffeeBeans} />
         </Container>
     )
 }

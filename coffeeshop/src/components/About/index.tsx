@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
     ButtonsContainer,
-    BackgroundImage,
+    BackgroundImage1,
+    BackgroundImage2,
     Container,
     Description,
     LeftBlockContainer,
@@ -11,7 +12,8 @@ import {
 import { DarkOrderButton } from '../Buttons/DarkOrderButton'
 import { MenuButton } from '../Buttons/MenuButton'
 import { TopCoffeeCard } from '../TopCoffeeCard/intex'
-import CoffeeBeansImage from '../../assets/images/coffee_beans_about.png'
+import CoffeeBeansImage1 from '../../assets/images/coffee_beans_about.png'
+import CoffeeBeansImage2 from '../../assets/images/coffee_beans_popular.png'
 
 export const About = () => {
     const coffeeInfo = {
@@ -20,6 +22,39 @@ export const About = () => {
         price: 18,
         imgUrl: '/images/cappucino_about.png',
     }
+
+    const [lastScrollTop, setLastScrollTop] = useState<number>(0)
+    const [scrollDirrectionIsDown, setScrollDirrectionIsDown] =
+        useState<boolean>()
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollTop: number =
+                window.pageYOffset || document.documentElement.scrollTop
+
+            if (currentScrollTop > lastScrollTop) {
+                if (!scrollDirrectionIsDown) setScrollDirrectionIsDown(true)
+            } else {
+                if (scrollDirrectionIsDown) setScrollDirrectionIsDown(false)
+            }
+
+            setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [lastScrollTop, scrollDirrectionIsDown])
+
+    const getAnimationClass = (): string => {
+        if (scrollDirrectionIsDown === undefined) {
+            return ''
+        }
+        return scrollDirrectionIsDown ? 'scrollDown' : 'scrollTop'
+    }
+
     return (
         <Container>
             <LeftBlockContainer>
@@ -40,7 +75,16 @@ export const About = () => {
             <RightBlockContainer>
                 <TopCoffeeCard {...coffeeInfo} />
             </RightBlockContainer>
-            <BackgroundImage src={CoffeeBeansImage} alt="CoffeeBeans" />
+            <BackgroundImage1
+                className={getAnimationClass()}
+                src={CoffeeBeansImage1}
+                alt="CoffeeBeans"
+            />
+            <BackgroundImage2
+                className={getAnimationClass()}
+                src={CoffeeBeansImage2}
+                alt="CoffeeBeans"
+            />
         </Container>
     )
 }
