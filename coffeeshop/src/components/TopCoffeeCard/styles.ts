@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 export const Container = styled.div`
     position: relative;
@@ -23,7 +24,7 @@ export const InfoContainer = styled.div`
     justify-content: center;
     align-items: center;
 `
-export const Title = styled.div`
+export const Title = styled(motion.div)`
     width: 271px;
     border: solid 10px rgba(255, 255, 255, 0.5);
     border-radius: 42px;
@@ -31,7 +32,7 @@ export const Title = styled.div`
     top: 25px;
     box-shadow: -10px 20px 25px rgba(0, 0, 0, 0.2);
 `
-export const Raiting = styled.div`
+export const Raiting = styled(motion.div)`
     width: 133px;
     border: solid 10px rgba(255, 255, 255, 0.5);
     border-radius: 42px;
@@ -46,7 +47,7 @@ export const RaitingStar = styled.img`
     margin-left: 4px;
 `
 export const RaitingValue = styled.span``
-export const Price = styled.div`
+export const Price = styled(motion.div)`
     width: 141px;
     border: solid 10px rgba(255, 255, 255, 0.5);
     border-radius: 42px;

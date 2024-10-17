@@ -42,9 +42,3 @@ export const BackgroundImage = styled.img`
     transform: translate(-50%);
     z-index: 3;
 `
-export const CoffeeBeansBackgroundImage = styled.img`
-    position: absolute;
-    z-index: 2;
-    top: -80px;
-    left: var(--coffee-beans-left-margin);
-`

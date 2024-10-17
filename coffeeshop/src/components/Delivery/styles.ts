@@ -1,11 +1,12 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
     display: flex;
     justify-content: center;
     gap: 100px;
 `
-export const CardContainer = styled.div`
+export const CardContainer = styled(motion.div)`
     display: flex;
     flex-direction: column;
     gap: 8px;
