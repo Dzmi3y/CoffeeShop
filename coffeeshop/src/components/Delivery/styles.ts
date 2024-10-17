@@ -1,11 +1,29 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    padding-top: 1rem;
-    padding-bottom: 90px;
-    background: linear-gradient(to bottom, #f6ebda 60%, #ffffff 40%);
-    position: relative;
-    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+`
+export const CardContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+`
+export const StyledImg = styled.img`
+    width: 159px;
+    height: 159px;
+`
+export const Description = styled.div`
+    font-family: PoppinsRegular;
+    font-size: 18px;
+    color: #000000;
+`
+export const MainInfo = styled.div`
+    font-family: PoppinsSemiBold;
+    font-size: 24px;
+    color: var(--secondary-color);
 `
 export const Title = styled.div`
     z-index: 4;
@@ -28,23 +46,4 @@ export const Title = styled.div`
             background: var(--primary-color);
         }
     }
-`
-export const CardContainer = styled.div`
-    z-index: 4;
-    display: flex;
-    justify-content: center;
-    gap: 38px;
-`
-export const BackgroundImage = styled.img`
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: 3;
-`
-export const CoffeeBeansBackgroundImage = styled.img`
-    position: absolute;
-    z-index: 2;
-    top: -80px;
-    left: var(--coffee-beans-left-margin);
 `

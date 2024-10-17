@@ -25,9 +25,9 @@
     --glass-color: #ffffff;
     --light-color: #7e7d7a;
 
-    --left-right-margin: 10rem;
-    --coffee-beans-right-margin: 2rem;
-    --coffee-beans-left-margin: 3rem;
+    --left-right-margin: 12rem;
+    --coffee-beans-right-margin: 3rem;
+    --coffee-beans-left-margin: 5rem;
 
     font-family: PoppinsRegular;
     color: var(--secondary-color);

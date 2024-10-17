@@ -3,6 +3,7 @@ import Menu from './components/Menu'
 import { Container, MenuContainer } from './styles'
 import { About } from './components/About/index'
 import { Popular } from './components/Popular'
+import { Delivery } from './components/Delivery/intex'
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <div className="about">
                 <About />
                 <Popular />
+                <Delivery />
             </div>
             <div className="products"></div>
             <div className="delivery"></div>
