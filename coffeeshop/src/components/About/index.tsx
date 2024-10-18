@@ -1,49 +1,50 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import CoffeeImage from '../../assets/images/about_coffee.png'
+import CoffeeBackgroundImage from '../../assets/images/about_bg_image.png'
 import {
-    ButtonsContainer,
-    BackgroundImage1,
-    BackgroundImage2,
+    BackgroundImage,
     Container,
     Description,
-    LeftBlockContainer,
-    RightBlockContainer,
+    ImageContainer,
+    InfoContainer,
+    MainText,
+    StyledImage,
     Title,
 } from './styles'
-import { DarkOrderButton } from '../Buttons/DarkOrderButton'
-import { MenuButton } from '../Buttons/MenuButton'
-import { TopCoffeeCard } from '../TopCoffeeCard/intex'
-import CoffeeBeansImage1 from '../../assets/images/coffee_beans_about.png'
-import CoffeeBeansImage2 from '../../assets/images/coffee_beans_popular.png'
+import { DarkButton } from '../Buttons/DarkButton'
 
 export const About = () => {
-    const coffeeInfo = {
-        name: 'Cappuccino',
-        raiting: 4.8,
-        price: 18,
-        imgUrl: '/images/cappucino_about.png',
-    }
     return (
         <Container>
-            <LeftBlockContainer>
+            <ImageContainer>
+                <StyledImage
+                    whileHover={{ scale: 1.1, rotate: 10 }}
+                    whileTap={{
+                        scale: 0.8,
+                        rotate: -10,
+                    }}
+                    src={CoffeeImage}
+                    alt="CoffeeImage"
+                />
+            </ImageContainer>
+            <InfoContainer>
                 <Title>
-                    Enjoy your <span className="orange">coffee</span>
-                    <br />
-                    before your activity
+                    About <span className="underline">us</span>
                 </Title>
+                <MainText>
+                    We provide quality coffee,
+                    <br />
+                    and ready to deliver.
+                </MainText>
                 <Description>
-                    Boost your productivity and build your <br />
-                    mood with a glass ofcoffee in the morning
+                    We are a company that makes and distributes
+                    <br />
+                    delicious drinks. our main product is made with a<br />
+                    secret recipe and available in stores worldwide.
                 </Description>
-                <ButtonsContainer>
-                    <DarkOrderButton />
-                    <MenuButton />
-                </ButtonsContainer>
-            </LeftBlockContainer>
-            <RightBlockContainer>
-                <TopCoffeeCard {...coffeeInfo} />
-            </RightBlockContainer>
-            <BackgroundImage1 src={CoffeeBeansImage1} alt="CoffeeBeans" />
-            <BackgroundImage2 src={CoffeeBeansImage2} alt="CoffeeBeans" />
+                <DarkButton>Get your coffee</DarkButton>
+            </InfoContainer>
+            <BackgroundImage src={CoffeeBackgroundImage} />
         </Container>
     )
 }

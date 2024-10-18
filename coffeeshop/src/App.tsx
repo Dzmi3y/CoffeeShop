@@ -1,9 +1,10 @@
 import React from 'react'
 import Menu from './components/Menu'
 import { Container, MenuContainer } from './styles'
-import { About } from './components/About/index'
+import { TopCoffee } from './components/TopCoffee/index'
 import { Popular } from './components/Popular'
 import { Delivery } from './components/Delivery/intex'
+import { About } from './components/About'
 
 function App() {
     return (
@@ -12,12 +13,14 @@ function App() {
                 <Menu />
             </MenuContainer>
             <div className="about">
-                <About />
+                <TopCoffee />
                 <Popular />
-                <Delivery />
+                <div className="delivery">
+                    <Delivery />
+                </div>
+                <About />
             </div>
             <div className="products"></div>
-            <div className="delivery"></div>
         </Container>
     )
 }
