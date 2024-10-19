@@ -29,6 +29,7 @@
     --coffee-beans-right-margin: 3rem;
     --coffee-beans-left-margin: 5rem;
 
+    min-width: 1366px;
     font-family: PoppinsRegular;
     color: var(--secondary-color);
     font-size: 18px;

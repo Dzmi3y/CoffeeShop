@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { media, ScreenSizeEnum } from '../../media'
 
 export const Container = styled.div`
     height: 560px;
@@ -48,10 +49,18 @@ export const BackgroundImage1 = styled.img`
     position: absolute;
     z-index: 0;
     right: var(--coffee-beans-right-margin);
+
+    ${media.lessThan(ScreenSizeEnum.XXL)`
+        display: none;
+    `}
 `
 export const BackgroundImage2 = styled.img`
     position: absolute;
     z-index: 2;
     bottom: -300px;
     left: var(--coffee-beans-left-margin);
+
+    ${media.lessThan(ScreenSizeEnum.XXL)`
+        display: none;
+    `}
 `
