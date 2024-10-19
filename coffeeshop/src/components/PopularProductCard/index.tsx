@@ -30,7 +30,7 @@ export const PopularProductCard: React.FC<Props> = ({
     addToCart,
 }) => {
     return (
-        <Container>
+        <Container whileHover={{ scale: 1.1 }}>
             <CoffeeImage src={imgUrl} alt={name} />
             <Raiting>
                 <RaitingValue>{raiting}</RaitingValue>

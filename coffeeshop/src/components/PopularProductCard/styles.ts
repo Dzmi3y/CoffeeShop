@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-export const Container = styled.div`
+import { motion } from 'framer-motion'
+
+export const Container = styled(motion.div)`
     z-index: 4;
     width: 343px;
     height: 373px;
@@ -18,6 +20,7 @@ export const Container = styled.div`
         border-radius: 16px;
         border: solid 6px rgba(255, 255, 255, 0.5);
         pointer-events: none;
+        box-shadow: -10px 20px 25px rgba(0, 0, 0, 0.2);
     }
 `
 export const ControlsContainer = styled.div`

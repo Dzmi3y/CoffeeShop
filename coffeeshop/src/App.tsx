@@ -5,6 +5,7 @@ import { TopCoffee } from './components/TopCoffee/index'
 import { Popular } from './components/Popular'
 import { Delivery } from './components/Delivery/intex'
 import { About } from './components/About'
+import { CoffeeMenu } from './components/CoffeeMenu/insex'
 
 function App() {
     return (
@@ -14,13 +15,16 @@ function App() {
             </MenuContainer>
             <div className="about">
                 <TopCoffee />
-                <Popular />
-                <div className="delivery">
-                    <Delivery />
-                </div>
-                <About />
             </div>
-            <div className="products"></div>
+            <Popular />
+            <div className="delivery">
+                <Delivery />
+            </div>
+            <About />
+
+            <div className="products">
+                <CoffeeMenu />
+            </div>
         </Container>
     )
 }
