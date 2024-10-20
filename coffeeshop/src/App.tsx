@@ -6,6 +6,7 @@ import { Popular } from './components/Popular'
 import { Delivery } from './components/Delivery/intex'
 import { About } from './components/About'
 import { CoffeeMenu } from './components/CoffeeMenu/insex'
+import { Feedback } from './components/Feedback'
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
             <div className="products">
                 <CoffeeMenu />
             </div>
+            <Feedback />
         </Container>
     )
 }
