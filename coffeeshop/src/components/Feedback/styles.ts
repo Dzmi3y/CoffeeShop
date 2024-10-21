@@ -9,8 +9,9 @@ export const Container = styled.div`
 `
 export const SliderContainer = styled.div`
     height: 120px;
+    width: 320px;
 `
-export const Slider = styled.div`
+export const Slider = styled(motion.div)`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,4 +28,5 @@ export const SliderItem = styled.div`
     height: 100px;
     min-height: 100px;
     min-width: 100px;
+    user-select: none;
 `
