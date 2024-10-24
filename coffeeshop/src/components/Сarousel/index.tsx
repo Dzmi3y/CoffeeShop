@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { motion, useAnimation, useMotionValue } from 'framer-motion'
 import {
     CarouselItem,
@@ -39,11 +39,22 @@ export const Сarousel: React.FC<Props> = ({ data }) => {
         setCurrentPage(index)
     }
 
+    const container = {
+        hidden: { opacity: 1, x: 100 },
+        visible: {
+            opacity: 1,
+            x: 0,
+        },
+    }
+
     return (
         <Container>
-            <div
+            <motion.div
                 style={{ overflow: 'hidden', width: itemWidth * 3 }}
                 ref={containerRef}
+                variants={container}
+                initial="hidden"
+                whileInView="visible"
             >
                 <motion.div
                     drag="x"
@@ -55,7 +66,7 @@ export const Сarousel: React.FC<Props> = ({ data }) => {
                 >
                     {data.map((item, index) => (
                         <motion.div key={index} style={{ minWidth: itemWidth }}>
-                            <CarouselItem>
+                            <CarouselItem whileHover={{ scale: 1.1 }}>
                                 <StyledImage
                                     draggable="false"
                                     src={item.imageUrl}
@@ -70,7 +81,7 @@ export const Сarousel: React.FC<Props> = ({ data }) => {
                         </motion.div>
                     ))}
                 </motion.div>
-            </div>
+            </motion.div>
             <PaginationContainer>
                 {buttons.map((_, index) => (
                     <PaginationDot
@@ -82,7 +93,7 @@ export const Сarousel: React.FC<Props> = ({ data }) => {
                         whileTap={{ scale: 0.9 }}
                         animate={{
                             backgroundColor:
-                                currentPage == index ? '#FF902B' : '#f8e9d2',
+                                currentPage == index ? '#FF902B' : '#FFCB7C',
                         }}
                         transition={{ duration: 0.5 }}
                     />

@@ -1,32 +1,30 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 
 export const Container = styled.div`
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 160px;
+    margin-bottom: 120px;
     display: flex;
-    justify-content: center;
-`
-export const SliderContainer = styled.div`
-    height: 120px;
-    width: 320px;
-`
-export const Slider = styled(motion.div)`
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    margin-left: 400px;
+    position: relative;
 `
 
-export const SliderItem = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
-    width: 100px;
-    height: 100px;
-    min-height: 100px;
-    min-width: 100px;
-    user-select: none;
+export const TextContainer = styled.div`
+    margin-left: var(--left-right-margin);
+    line-height: 2rem;
+`
+export const Title = styled.div`
+    font-size: 32px;
+    font-family: PoppinsSemiBold;
+    color: #000000;
+`
+export const Description = styled.div`
+    font-size: 18px;
+    font-family: PoppinsRegular;
+    color: var(--light-color);
+`
+export const BackgroundImage = styled.img`
+    position: absolute;
+    left: 0;
+    z-index: -1;
 `

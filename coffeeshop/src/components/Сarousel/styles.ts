@@ -5,9 +5,13 @@ export const Container = styled.div`
     flex-direction: column;
 `
 
-export const CarouselItem = styled.div`
+export const CarouselItem = styled(motion.div)`
     user-select: none;
     position: relative;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    filter: drop-shadow(-5px 10px 10px rgba(0, 0, 0, 0.2));
 `
 export const TextContainerBorder = styled.div`
     bottom: 15px;
@@ -41,7 +45,7 @@ export const StyledImage = styled.img`
 export const PaginationContainer = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 5px;
     gap: 10px;
 `
 
