@@ -1,0 +1,27 @@
+[
+    {
+        "imageUrl": "/images/avatars/1.png",
+        "name": "Alex",
+        "message": "Great atmosphere and delicious coffee!"
+    },
+    {
+        "imageUrl": "/images/avatars/2.png",
+        "name": "John",
+        "message": "Very cozy place, and the baristas are always friendly."
+    },
+    {
+        "imageUrl": "/images/avatars/3.png",
+        "name": "Anna",
+        "message": "Love coming here in the mornings."
+    },
+    {
+        "imageUrl": "/images/avatars/4.png",
+        "name": "Michael",
+        "message": "The coffee is simply amazing."
+    },
+    {
+        "imageUrl": "/images/avatars/5.png",
+        "name": "David",
+        "message": "Fantastic coffee. Thank you!"
+    }
+]
